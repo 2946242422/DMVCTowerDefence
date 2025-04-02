@@ -13,11 +13,6 @@ public class SellIcon : MonoBehaviour
 
     void OnMouseDown()
     {
-        SellTowerArgs e = new SellTowerArgs()
-        {
-            tower = m_Tower
-        };
-        SendMessageUpwards("SellTower", e, SendMessageOptions.DontRequireReceiver);
         LBGameWorld._lbGameWorldLogicCtrl.SellTower(m_Tower);
     }
 }

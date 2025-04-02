@@ -27,11 +27,7 @@ public class UpgradeIcon : MonoBehaviour
         if (m_Tower.IsTopLevel)
             return;
 
-        UpgradeTowerArgs e = new UpgradeTowerArgs()
-        {
-            tower = m_Tower
-        };
+      
         LBGameWorld._lbGameWorldLogicCtrl.UpgradeTower(m_Tower);
-        SendMessageUpwards("UpgradeTower", e, SendMessageOptions.DontRequireReceiver);
     }
 }
